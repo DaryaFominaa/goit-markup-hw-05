@@ -12,7 +12,7 @@
   --icon-fii:#AFB1B8;
   --card-gap:30px;
   --card-item:3;
- 
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 
@@ -166,7 +166,7 @@ gap: 30px;
 
 .site-nav .link {
   color: var(--title-text-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition);
 }
 
 .site-nav .link:hover,
@@ -186,13 +186,13 @@ gap: 30px;
 }
 
 .link.header {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition);
 }
 
 .contacts-icon {
   fill: var(--primary-text-color);
   margin-right: 10px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition);
 }
 .link.header:hover,
 .link.header:focus {
@@ -237,8 +237,8 @@ gap: 30px;
   color: var(--button-color);
   background-color: var(--accent-color);
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition),
+      background-color var(--transition);
 }
 
 .button.hero:hover,
@@ -441,8 +441,8 @@ position: relative;
   background-size: contain;
 
   color: var(--icon-fii);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition),
+  background-color var(--transition);
 
 }
 
@@ -479,7 +479,7 @@ position: relative;
   width: 170px;
   height: 92px;
   fill: var(--icon-fii);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition);
 }
 
 .clients.link {
@@ -496,7 +496,7 @@ position: relative;
 
   border: 1px solid var(--icon-fii);
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition);
 }
 
 .clients.link:hover .icon,
@@ -524,39 +524,25 @@ footer {
 }
 
 .item.address {
-  color: var(--button-color);
-  font-style: normal;
-  
-  }
-
-.contacts.list .address:hover,
-.contacts.list .address:focus,
-.contacts.list .address:active {
-  color: var(--accent-color);
-}
-
-.item.address .address {
-  font-size: 14px;
-  line-height: 2;
   text-decoration: none;
-
-  color: var(--button-color);
-}
-
-.item.address .link.footer {
+  font-style: normal;
   font-size: 14px;
   line-height: 1.7;
   color: var(--footer-text-color);
-  text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    
+  transition: color var(--transition);
+  }
 
-.item.address .link.footer:hover,
-.item.address .link.footer:focus {
+.address.link.footer:hover,
+.address.link.footer:focus,
+.item.address:hover,
+.item.address:focus{
   color: var(--accent-color);
 }
-
-
+.address.link.footer{
+color: var(--button-color);
+transition: color var(--transition);
+}
 
 .contacts.list.footer {
   display: block;
@@ -630,7 +616,7 @@ fill: var(--button-color);
   justify-content: center;
   opacity: 1;
   
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--transition);
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -657,9 +643,9 @@ fill: var(--button-color);
   border-radius: 4px;
   opacity: 1;
   
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  visibility 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  opacity 400ms ease-in-out 200ms;;
+  transition: transform var(--transition),
+  visibility var(--transition),
+  opacity 400ms ease-in-out 200ms;
     }
 
 .button-close{
@@ -705,9 +691,9 @@ fill: var(--button-color);
     background-color: var(--button-bcr-color);
     box-shadow: none;
     
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition),
+      background-color var(--transition),
+      box-shadow var(--transition);
   }
   .button.filter:hover,
   .button.filter:focus,
@@ -745,7 +731,7 @@ fill: var(--button-color);
 
 .portfolio-item {
   background-color: var(--button-color);
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--transition);
 }
 
 .portfolio-item:hover,
@@ -803,7 +789,7 @@ fill: var(--button-color);
 
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--transition);
 }
 
 .portfolio-item :hover .portfolio-overlay {
